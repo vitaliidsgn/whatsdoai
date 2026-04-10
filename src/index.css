@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.font-alpina {
+  font-family: "GT Alpina Trial", Georgia, serif;
+}
+
+.btn {
+  transition: opacity 0.15s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn-outline:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  opacity: 1 !important;
+}
+.btn-light:hover {
+  opacity: 0.85 !important;
+}
+
+.use-case-tab {
+  transition: opacity 0.15s ease !important;
+}
+.use-case-tab:not(.active):hover {
+  opacity: 0.7 !important;
+}
+
+.uc-text-fade {
+  transition: opacity 0.25s ease;
+}
