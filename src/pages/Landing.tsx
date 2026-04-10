@@ -907,7 +907,7 @@ export function Landing() {
             <h2
               className="font-alpina"
               style={{
-                fontWeight: 400,
+                fontWeight: 500,
                 fontSize: 60,
                 lineHeight: "72px",
                 color: "#fff",
@@ -1321,7 +1321,7 @@ export function Landing() {
             </p>
             <h2
               className="font-alpina"
-              style={{ fontSize: 48, lineHeight: "60px", marginTop: 8 }}
+              style={{ fontSize: 48, lineHeight: "60px", marginTop: 8, fontWeight: 500 }}
             >
               Infrastructure for
               <br />
@@ -1559,7 +1559,7 @@ export function Landing() {
           </p>
           <h2
             className="font-alpina"
-            style={{ fontSize: 48, lineHeight: "60px", color: "#fff6e5" }}
+            style={{ fontSize: 48, lineHeight: "60px", color: "#fff6e5", fontWeight: 500 }}
           >
             Let AI agents book, order, and pay for your services.
           </h2>
