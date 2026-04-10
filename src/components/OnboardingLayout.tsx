@@ -21,11 +21,12 @@ export function OnboardingLayout({
   children,
 }: OnboardingLayoutProps) {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: "#fff7e8" }}>
       <div className="flex min-h-screen relative">
         {/* Left panel */}
         <div
-          className="w-full md:w-1/2 flex flex-col bg-white"
+          className="w-full md:w-1/2 flex flex-col"
+          style={{ backgroundColor: "#fff7e8" }}
           style={{ padding: "120px 80px 80px 80px" }}
         >
           {/* Barcode logo */}
