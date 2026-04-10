@@ -191,7 +191,7 @@ export function Landing() {
             />
           </a>
           <a
-            href="#signup"
+            href="/ced666ad-0d94-4147-8f95-ea12eb1cad41"
             className="btn"
             style={{
               backgroundColor: "#000",
@@ -240,7 +240,7 @@ export function Landing() {
             style={{ marginTop: 48, gap: 16 }}
           >
             <a
-              href="#signup"
+              href="/ced666ad-0d94-4147-8f95-ea12eb1cad41"
               className="btn"
               style={{
                 backgroundColor: "#000",
@@ -1006,7 +1006,7 @@ export function Landing() {
             {/* Button */}
             <div style={{ marginTop: 60 }}>
               <a
-                href="#signup"
+                href="/ced666ad-0d94-4147-8f95-ea12eb1cad41"
                 className="btn btn-light"
                 style={{
                   background: "#fff7e8",
