@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-        alpina: ["GT Alpina Trial", "Georgia", "serif"],
+        alpina: ["IBM Plex Serif", "Georgia", "serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
