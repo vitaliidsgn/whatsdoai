@@ -1778,7 +1778,9 @@ export function Landing() {
                 }}
               >
                 <a
-                  href="#"
+                  href="https://whatsdo.notion.site/Cookie-Policy-33e3ba307bbf80ceb620de305cd31186"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontSize: 14,
                     color: "#000",
