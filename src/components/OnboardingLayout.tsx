@@ -26,8 +26,7 @@ export function OnboardingLayout({
         {/* Left panel */}
         <div
           className="w-full md:w-1/2 flex flex-col"
-          style={{ backgroundColor: "#fff7e8" }}
-          style={{ padding: "120px 80px 80px 80px" }}
+          style={{ backgroundColor: "#fff7e8", padding: "120px 80px 80px 80px" }}
         >
           {/* Barcode logo */}
           <div style={{ width: 83, height: 21, flexShrink: 0 }}>
