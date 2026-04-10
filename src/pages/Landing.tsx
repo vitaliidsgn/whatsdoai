@@ -1830,7 +1830,9 @@ export function Landing() {
                 }}
               >
                 <a
-                  href="#"
+                  href="https://x.com/whatsdoai"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontSize: 14,
                     color: "#000",
@@ -1841,7 +1843,9 @@ export function Landing() {
                   X
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/what-sdo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontSize: 14,
                     color: "#000",
