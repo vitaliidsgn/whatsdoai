@@ -106,7 +106,7 @@ export function Complete({ partner: initialPartner }: CompleteProps) {
 
       {syncStatus === "success" && (
         <a
-          href="/onboarding"
+          href="/"
           className="btn"
           style={{
             display: "inline-block",

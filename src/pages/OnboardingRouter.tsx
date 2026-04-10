@@ -105,7 +105,7 @@ export function OnboardingRouter() {
           {fetchError || "Partner not found"}
         </p>
         <a
-          href="/onboarding"
+          href="/"
           style={{ fontSize: 16, color: "black", textDecoration: "underline" }}
         >
           Back to registration

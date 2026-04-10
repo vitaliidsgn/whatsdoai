@@ -159,7 +159,7 @@ export function Landing() {
 
     try {
       const data = await registerPartner(email);
-      navigate(`/onboarding/${data.partner.id}`);
+      navigate(`/${data.partner.id}`);
     } catch (err: unknown) {
       const msg =
         err instanceof Error ? err.message : "Something went wrong.";

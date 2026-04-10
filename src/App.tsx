@@ -6,9 +6,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/onboarding" element={<Landing />} />
-        <Route path="/onboarding/:id" element={<OnboardingRouter />} />
-        <Route path="*" element={<Navigate to="/onboarding" replace />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/:id" element={<OnboardingRouter />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
