@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { registerPartner } from "../api/client";
+import { CookieBanner } from "../components/CookieBanner";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -1864,6 +1865,8 @@ export function Landing() {
           </div>
         </div>
       </footer>
+
+      <CookieBanner />
     </div>
   );
 }
