@@ -518,7 +518,7 @@ export function Landing() {
 
           {/* CONFIRMATION BADGE */}
           <div
-            className="resp-hide"
+            className="resp-hide flex items-center"
             style={{
               position: "absolute",
               left: "calc(50% - 119px)",
@@ -529,7 +529,6 @@ export function Landing() {
               padding: "8px 12px 8px 8px",
               zIndex: 10,
             }}
-            className="flex items-center"
           >
             <div style={{ gap: 8 }} className="flex items-center">
               <img
