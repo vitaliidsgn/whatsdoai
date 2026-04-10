@@ -1788,7 +1788,9 @@ export function Landing() {
                   Cookie Policy
                 </a>
                 <a
-                  href="#"
+                  href="https://whatsdo.notion.site/Privacy-Policy-29d3ba307bbf80d8833ce551c8ed76d5"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontSize: 14,
                     color: "#000",
@@ -1799,7 +1801,9 @@ export function Landing() {
                   Privacy Policy
                 </a>
                 <a
-                  href="#"
+                  href="https://whatsdo.notion.site/Terms-of-Service-29d3ba307bbf80ea8e6cf1607ab3617b"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontSize: 14,
                     color: "#000",
