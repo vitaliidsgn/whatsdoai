@@ -319,7 +319,7 @@ export function Landing() {
           >
             <div
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "'Departure Mono', monospace",
                 textAlign: "center",
               }}
             >
@@ -342,7 +342,7 @@ export function Landing() {
             </div>
             <div
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "'Departure Mono', monospace",
                 fontSize: 10,
               }}
             >
