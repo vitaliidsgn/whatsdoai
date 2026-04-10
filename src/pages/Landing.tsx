@@ -213,9 +213,9 @@ export function Landing() {
       {/* ==================== HERO ==================== */}
       <section style={{ maxWidth: 1200, margin: "0 auto" }}>
         {/* Text content */}
-        <div style={{ paddingTop: 80, textAlign: "center" }}>
+        <div style={{ paddingTop: 80, textAlign: "center" }} className="resp-hero-pt">
           <h1
-            className="font-alpina"
+            className="font-alpina resp-hero-title"
             style={{
               fontWeight: 500,
               fontSize: 72,
@@ -280,6 +280,7 @@ export function Landing() {
 
         {/* Hero Image Container */}
         <div
+          className="resp-h-auto"
           style={{
             marginTop: 60,
             height: 552,
@@ -301,6 +302,7 @@ export function Landing() {
 
           {/* RECEIPT CARD (torn bottom via SVG mask) */}
           <div
+            className="resp-hide"
             style={{
               position: "absolute",
               left: "calc(50% + 144px)",
@@ -447,6 +449,7 @@ export function Landing() {
 
           {/* RESERVATION CARD */}
           <div
+            className="resp-hide"
             style={{
               position: "absolute",
               left: "calc(50% - 109.5px)",
@@ -515,6 +518,7 @@ export function Landing() {
 
           {/* CONFIRMATION BADGE */}
           <div
+            className="resp-hide"
             style={{
               position: "absolute",
               left: "calc(50% - 119px)",
@@ -543,7 +547,7 @@ export function Landing() {
       </section>
 
       {/* ==================== NUMBERS ==================== */}
-      <section style={{ padding: "72px 0" }}>
+      <section style={{ padding: "72px 0" }} className="resp-section">
         <div
           style={{
             maxWidth: 1200,
@@ -551,10 +555,11 @@ export function Landing() {
             padding: "0 32px",
             gap: 64,
           }}
-          className="flex items-center"
+          className="flex items-center resp-stack resp-gap-md"
         >
           {/* Divider */}
           <div
+            className="resp-hide"
             style={{
               width: 1,
               background: "rgba(0,0,0,0.15)",
@@ -564,7 +569,7 @@ export function Landing() {
           {/* Stat 1 */}
           <div style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
             <p
-              className="font-alpina"
+              className="font-alpina resp-stat-num"
               style={{ fontWeight: 500, fontSize: 60, lineHeight: "72px" }}
             >
               1B+
@@ -582,6 +587,7 @@ export function Landing() {
           </div>
           {/* Divider */}
           <div
+            className="resp-hide"
             style={{
               width: 1,
               background: "rgba(0,0,0,0.15)",
@@ -591,7 +597,7 @@ export function Landing() {
           {/* Stat 2 */}
           <div style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
             <p
-              className="font-alpina"
+              className="font-alpina resp-stat-num"
               style={{ fontWeight: 500, fontSize: 60, lineHeight: "72px" }}
             >
               100M+
@@ -609,6 +615,7 @@ export function Landing() {
           </div>
           {/* Divider */}
           <div
+            className="resp-hide"
             style={{
               width: 1,
               background: "rgba(0,0,0,0.15)",
@@ -618,7 +625,7 @@ export function Landing() {
           {/* Stat 3 */}
           <div style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
             <p
-              className="font-alpina"
+              className="font-alpina resp-stat-num"
               style={{ fontWeight: 500, fontSize: 60, lineHeight: "72px" }}
             >
               $15T+
@@ -636,6 +643,7 @@ export function Landing() {
           </div>
           {/* Divider */}
           <div
+            className="resp-hide"
             style={{
               width: 1,
               background: "rgba(0,0,0,0.15)",
@@ -650,9 +658,10 @@ export function Landing() {
         id="how-it-works"
         style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}
       >
-        <div className="flex items-center" style={{ gap: 64 }}>
+        <div className="flex items-center resp-stack resp-gap-md" style={{ gap: 64 }}>
           {/* Left Column: Interface Video */}
           <div
+            className="resp-h-auto resp-w-full"
             style={{
               flex: 1,
               background: "#ede6d8",
@@ -679,7 +688,7 @@ export function Landing() {
           {/* Right Column: Steps */}
           <div style={{ flex: 1 }}>
             <h2
-              className="font-alpina"
+              className="font-alpina resp-h2"
               style={{ fontWeight: 500, fontSize: 48, lineHeight: "60px" }}
             >
               How it works for your business
@@ -857,6 +866,7 @@ export function Landing() {
         }}
       >
         <div
+          className="resp-h-auto"
           style={{ position: "relative", overflow: "hidden", height: 728 }}
         >
           {/* Background image */}
@@ -906,7 +916,7 @@ export function Landing() {
               />
             </div>
             <h2
-              className="font-alpina"
+              className="font-alpina resp-h2-lg"
               style={{
                 fontWeight: 500,
                 fontSize: 60,
@@ -1059,7 +1069,7 @@ export function Landing() {
             USE CASES
           </p>
           <h2
-            className="font-alpina"
+            className="font-alpina resp-h2"
             style={{
               fontWeight: 500,
               fontSize: 48,
@@ -1110,9 +1120,10 @@ export function Landing() {
         </div>
 
         {/* Content area */}
-        <div className="flex" style={{ marginTop: 53 }}>
+        <div className="flex resp-stack" style={{ marginTop: 53 }}>
           {/* Left: Image */}
           <div
+            className="resp-min-h-auto"
             style={{
               flex: 1,
               overflow: "hidden",
@@ -1305,7 +1316,7 @@ export function Landing() {
         }}
       >
         <div
-          className="flex"
+          className="flex resp-stack resp-gap-md"
           style={{ gap: 32, alignItems: "start" }}
         >
           {/* Left column */}
@@ -1321,7 +1332,7 @@ export function Landing() {
               PLATFORM
             </p>
             <h2
-              className="font-alpina"
+              className="font-alpina resp-h2"
               style={{ fontSize: 48, lineHeight: "60px", marginTop: 8, fontWeight: 500 }}
             >
               Infrastructure for
@@ -1540,6 +1551,7 @@ export function Landing() {
         }}
       >
         <div
+          className="resp-section-lg"
           style={{
             maxWidth: 1014,
             margin: "0 auto",
@@ -1559,7 +1571,7 @@ export function Landing() {
             JOIN OUR NETWORK
           </p>
           <h2
-            className="font-alpina"
+            className="font-alpina resp-h2"
             style={{ fontSize: 48, lineHeight: "60px", color: "#fff6e5", fontWeight: 500 }}
           >
             Let AI agents book, order, and pay for your services.
@@ -1680,7 +1692,7 @@ export function Landing() {
       <footer style={{ padding: "48px 0" }}>
         <div
           style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}
-          className="flex justify-between"
+          className="flex justify-between resp-footer-cols"
         >
           {/* Left side */}
           <div>
@@ -1694,73 +1706,9 @@ export function Landing() {
             </p>
           </div>
           {/* Right side */}
-          <div className="flex" style={{ gap: 32 }}>
-            {/* Company */}
-            <div style={{ width: 173 }}>
-              <p
-                style={{
-                  fontSize: 14,
-                  color: "#000",
-                  margin: "0 0 8px 0",
-                }}
-              >
-                Company
-              </p>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 8,
-                }}
-              >
-                <a
-                  href="#"
-                  style={{
-                    fontSize: 14,
-                    color: "#000",
-                    opacity: 0.5,
-                    textDecoration: "none",
-                  }}
-                >
-                  Careers
-                </a>
-                <a
-                  href="#"
-                  style={{
-                    fontSize: 14,
-                    color: "#000",
-                    opacity: 0.5,
-                    textDecoration: "none",
-                  }}
-                >
-                  Changelog
-                </a>
-                <a
-                  href="#"
-                  style={{
-                    fontSize: 14,
-                    color: "#000",
-                    opacity: 0.5,
-                    textDecoration: "none",
-                  }}
-                >
-                  Contact
-                </a>
-                <a
-                  href="#"
-                  style={{
-                    fontSize: 14,
-                    color: "#000",
-                    opacity: 0.5,
-                    textDecoration: "none",
-                  }}
-                >
-                  Documentation
-                </a>
-              </div>
-            </div>
+          <div className="flex resp-stack" style={{ gap: 32 }}>
             {/* Legal */}
-            <div style={{ width: 173 }}>
+            <div className="resp-footer-col" style={{ width: 173 }}>
               <p
                 style={{
                   fontSize: 14,
@@ -1819,7 +1767,7 @@ export function Landing() {
               </div>
             </div>
             {/* Social */}
-            <div style={{ width: 173 }}>
+            <div className="resp-footer-col" style={{ width: 173 }}>
               <p
                 style={{
                   fontSize: 14,

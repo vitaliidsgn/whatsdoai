@@ -31,7 +31,7 @@ export function CookieBanner() {
         right: 0,
         zIndex: 9999,
         backgroundColor: "#000",
-        padding: "16px 32px",
+        padding: "16px 20px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

@@ -43,3 +43,26 @@
 .uc-text-fade {
   transition: opacity 0.25s ease;
 }
+
+/* ---- Responsive overrides ---- */
+@media (max-width: 768px) {
+  .resp-hero-title { font-size: 40px !important; line-height: 44px !important; }
+  .resp-stat-num { font-size: 36px !important; line-height: 44px !important; }
+  .resp-h2 { font-size: 32px !important; line-height: 40px !important; }
+  .resp-h2-lg { font-size: 36px !important; line-height: 44px !important; }
+  .resp-section { padding-top: 40px !important; padding-bottom: 40px !important; }
+  .resp-section-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
+  .resp-hero-pt { padding-top: 40px !important; }
+  .resp-stack { flex-direction: column !important; }
+  .resp-gap-sm { gap: 24px !important; }
+  .resp-gap-md { gap: 32px !important; }
+  .resp-hide { display: none !important; }
+  .resp-h-auto { height: 300px !important; }
+  .resp-min-h-auto { min-height: 250px !important; height: 250px !important; }
+  .resp-w-full { width: 100% !important; }
+  .resp-text-center { text-align: center !important; }
+  .resp-p-sm { padding: 24px 16px !important; }
+  .resp-receipt-hide { display: none !important; }
+  .resp-footer-cols { flex-direction: column !important; gap: 32px !important; }
+  .resp-footer-col { width: auto !important; }
+}
