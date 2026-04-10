@@ -190,90 +190,22 @@ export function Landing() {
               }}
             />
           </a>
-          {/* Nav */}
-          <div className="flex items-center" style={{ gap: 20 }}>
-            <div className="flex" style={{ gap: 20 }}>
-              <a
-                href="#"
-                style={{
-                  fontSize: 14,
-                  fontWeight: 400,
-                  color: "#000",
-                  textDecoration: "none",
-                }}
-              >
-                Developers
-              </a>
-              <a
-                href="#"
-                style={{
-                  fontSize: 14,
-                  fontWeight: 400,
-                  color: "#000",
-                  textDecoration: "none",
-                }}
-              >
-                Business
-              </a>
-              <a
-                href="#"
-                style={{
-                  fontSize: 14,
-                  fontWeight: 400,
-                  color: "#000",
-                  textDecoration: "none",
-                }}
-              >
-                About us
-              </a>
-              <a
-                href="#"
-                style={{
-                  fontSize: 14,
-                  fontWeight: 400,
-                  color: "#000",
-                  textDecoration: "none",
-                }}
-              >
-                Docs
-              </a>
-            </div>
-            <div className="flex" style={{ gap: 8 }}>
-              <a
-                href="#"
-                className="btn btn-outline"
-                style={{
-                  border: "1px solid #000",
-                  background: "transparent",
-                  padding: "8px 16px",
-                  fontSize: 14,
-                  fontWeight: 600,
-                  color: "#000",
-                  textDecoration: "none",
-                  borderRadius: 0,
-                  display: "inline-block",
-                }}
-              >
-                Sign in
-              </a>
-              <a
-                href="#signup"
-                className="btn"
-                style={{
-                  backgroundColor: "#000",
-                  padding: "8px 16px",
-                  fontSize: 14,
-                  fontWeight: 600,
-                  color: "#fff7e8",
-                  textDecoration: "none",
-                  borderRadius: 0,
-                  display: "inline-block",
-                }}
-              >
-                Get started
-              </a>
-            </div>
-          </div>
+          <a
+            href="#signup"
+            className="btn"
+            style={{
+              backgroundColor: "#000",
+              padding: "8px 16px",
+              fontSize: 14,
+              fontWeight: 600,
+              color: "#fff7e8",
+              textDecoration: "none",
+              borderRadius: 0,
+              display: "inline-block",
+            }}
+          >
+            Get started
+          </a>
         </div>
       </header>
 
