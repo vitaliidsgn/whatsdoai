@@ -9,18 +9,18 @@ import { registerPartner } from "../api/client";
 const USE_CASES = [
   {
     title: "Restaurants",
-    img: "/onboarding/hero-restaurant.jpg",
-    desc: "Fill your restaurant with AI-assisted diners.",
-    cta: "Reserve a table for 2 at Briole tonight",
+    img: "/onboarding/usecase-restaurant.jpg",
+    desc: "Accept reservations and payments from AI.",
+    cta: "Book a table for two tonight near me",
     steps: [
-      { label: "Checks availability", value: "Table for 2 \u00b7 Tonight \u00b7 8:00 PM" },
-      { label: "Reserves and pays", value: "Reservation confirmed" },
+      { label: "Finds availability", value: "Sunday Caf\u00e9 \u00b7 Table for 2 \u00b7 11:30 AM" },
+      { label: "Books and pays", value: "Reservation confirmed" },
       { label: "Finalizes", value: "Added to your calendar" },
     ],
   },
   {
     title: "Gyms & fitness studios",
-    img: "/onboarding/usecase-bg.jpg",
+    img: "/onboarding/usecase-gym.png",
     desc: "Fill classes and manage bookings through AI.",
     cta: "Book a yoga class tomorrow morning",
     steps: [
@@ -31,35 +31,35 @@ const USE_CASES = [
   },
   {
     title: "Wellness & beauty",
-    img: "/onboarding/hero-restaurant.jpg",
-    desc: "Automate salon and spa appointments through AI.",
-    cta: "Book a haircut this afternoon",
+    img: "/onboarding/usecase-wellness.jpg",
+    desc: "Turn availability into confirmed appointments.",
+    cta: "Find a massage nearby tonight",
     steps: [
-      { label: "Finds availability", value: "Haircut \u00b7 Today \u00b7 3:00 PM" },
+      { label: "Finds availability", value: "Serenity Spa \u00b7 Massage \u00b7 7:00 PM" },
       { label: "Books and pays", value: "Appointment confirmed" },
       { label: "Finalizes", value: "Added to your calendar" },
     ],
   },
   {
     title: "Sports venues",
-    img: "/onboarding/hero-restaurant.jpg",
-    desc: "Let AI reserve courts and fields.",
-    cta: "Reserve a tennis court Saturday morning",
+    img: "/onboarding/usecase-sports.jpg",
+    desc: "Make courts and facilities bookable in real time.",
+    cta: "Reserve a tennis court at 7 PM",
     steps: [
-      { label: "Finds availability", value: "Tennis court \u00b7 Saturday \u00b7 10:00 AM" },
-      { label: "Books and pays", value: "Reservation confirmed" },
+      { label: "Finds availability", value: "Tennis court \u00b7 Today \u00b7 7:00 PM" },
+      { label: "Books and pays", value: "Appointment confirmed" },
       { label: "Finalizes", value: "Added to your calendar" },
     ],
   },
   {
     title: "Events & venues",
-    img: "/onboarding/hero-restaurant.jpg",
-    desc: "AI-powered event and venue bookings.",
-    cta: "Find a venue for a birthday party next Friday",
+    img: "/onboarding/usecase-events.jpg",
+    desc: "Sell tickets through AI assistants.",
+    cta: "Find live music tonight near me",
     steps: [
-      { label: "Finds availability", value: "Event space \u00b7 Next Friday \u00b7 6:00 PM" },
-      { label: "Books and pays", value: "Reservation confirmed" },
-      { label: "Finalizes", value: "Confirmation sent" },
+      { label: "Finds availability", value: "Live jazz at Blue Note \u00b7 8:00 PM" },
+      { label: "Books and pays", value: "Appointment confirmed" },
+      { label: "Finalizes", value: "Added to your calendar" },
     ],
   },
 ];
@@ -718,7 +718,7 @@ export function Landing() {
         style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}
       >
         <div className="flex items-center" style={{ gap: 64 }}>
-          {/* Left Column: Phone Mockup */}
+          {/* Left Column: Interface Video */}
           <div
             style={{
               flex: 1,
@@ -726,19 +726,20 @@ export function Landing() {
               height: 590,
               overflow: "hidden",
               position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            {/* Dark Phone Mockup */}
-            <div
+            <video
+              src="/onboarding/interface-preview.mp4"
+              autoPlay
+              muted
+              playsInline
               style={{
-                position: "absolute",
-                left: "50%",
-                transform: "translateX(-50%)",
-                top: 78,
-                width: 333,
-                height: 555,
-                background: "#1a1a1a",
-                borderRadius: "68px 68px 0 0",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
               }}
             />
           </div>
