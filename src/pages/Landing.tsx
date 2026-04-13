@@ -223,7 +223,9 @@ export function Landing() {
               color: "#000",
             }}
           >
-            Get booked by AI.
+            The Action Layer for
+            <br />
+            AI Agents.
           </h1>
           <p
             style={{
