@@ -25,7 +25,7 @@ export function OnboardingLayout({
       <div className="flex min-h-screen relative">
         {/* Left panel */}
         <div
-          className="w-full md:w-1/2 flex flex-col"
+          className="w-full md:w-1/2 flex flex-col resp-onboarding-panel"
           style={{ backgroundColor: "#fff7e8", padding: "120px 80px 80px 80px" }}
         >
           {/* Barcode logo */}
