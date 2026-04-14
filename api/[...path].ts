@@ -4,7 +4,7 @@ export default async function handler(
   req: VercelRequest,
   res: VercelResponse
 ) {
-  const backendUrl = process.env.BACKEND_URL;
+  const backendUrl = process.env.BACKEND_URL?.trim();
   if (!backendUrl) {
     return res.status(500).json({ error: "BACKEND_URL not configured" });
   }
@@ -25,6 +25,7 @@ export default async function handler(
   const fetchOptions: RequestInit = {
     method: req.method,
     headers,
+    redirect: "manual",
   };
 
   if (req.method !== "GET" && req.method !== "HEAD" && req.body) {
@@ -33,6 +34,15 @@ export default async function handler(
 
   try {
     const response = await fetch(finalUrl, fetchOptions);
+
+    // Forward redirects to the browser instead of following them
+    if (response.status >= 300 && response.status < 400) {
+      const location = response.headers.get("location");
+      if (location) {
+        return res.redirect(response.status, location);
+      }
+    }
+
     const contentType = response.headers.get("content-type") || "";
 
     res.status(response.status);
