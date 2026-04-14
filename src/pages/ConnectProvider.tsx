@@ -21,7 +21,7 @@ export function ConnectProvider({
     }
   }, [connected, onStepComplete]);
 
-  const returnUrl = `${window.location.origin}/${partner.id}`;
+  const returnUrl = `${__BACKEND_URL__}/onboarding/${partner.id}`;
   const oauthUrl = `/api/square/authorize?partner_id=${partner.id}&return_url=${encodeURIComponent(returnUrl)}`;
 
   function handleConnect() {
