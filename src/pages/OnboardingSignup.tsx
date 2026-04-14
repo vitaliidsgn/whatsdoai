@@ -11,7 +11,6 @@ export function OnboardingSignup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState(searchParams.get("email") || "");
   const [phone, setPhone] = useState("");
-  const [nameError, setNameError] = useState(false);
   const [formError, setFormError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const nameRef = useRef<HTMLInputElement>(null);
@@ -41,7 +40,6 @@ export function OnboardingSignup() {
 
   function handleNameChange(value: string) {
     setName(value);
-    setNameError(value.length > 0 && value.length < 2);
     saveDraft(value, email, phone);
   }
 
@@ -138,11 +136,6 @@ export function OnboardingSignup() {
             onFocus={(e) => (e.target.style.borderColor = "black")}
             onBlur={(e) => (e.target.style.borderColor = "#909196")}
           />
-          {nameError && (
-            <p style={{ marginTop: 4, fontSize: 13, color: "#da1e28" }}>
-              Business name must be at least 2 characters.
-            </p>
-          )}
         </div>
 
         {/* Email */}
