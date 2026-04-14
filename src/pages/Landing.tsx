@@ -173,7 +173,7 @@ export function Landing() {
   return (
     <div style={{ backgroundColor: "#fff7e8", color: "#000" }}>
       {/* ==================== HEADER ==================== */}
-      <header style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
+      <header className="resp-px" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
         <div
           style={{ padding: "24px 0" }}
           className="flex items-center justify-between"
@@ -183,6 +183,7 @@ export function Landing() {
             <img
               src="/onboarding/header-logo.svg"
               alt="What'sDo"
+              className="resp-header-logo"
               style={{
                 width: "219.767px",
                 height: 21,
@@ -191,8 +192,11 @@ export function Landing() {
               }}
             />
           </a>
-          <a
-            href="/ced666ad-0d94-4147-8f95-ea12eb1cad41"
+          <button
+            onClick={() => {
+              document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
+              showEmailForm();
+            }}
             className="btn"
             style={{
               backgroundColor: "#000",
@@ -200,13 +204,14 @@ export function Landing() {
               fontSize: 14,
               fontWeight: 600,
               color: "#fff7e8",
-              textDecoration: "none",
+              border: "none",
               borderRadius: 0,
+              cursor: "pointer",
               display: "inline-block",
             }}
           >
             Get started
-          </a>
+          </button>
         </div>
       </header>
 
@@ -242,8 +247,11 @@ export function Landing() {
             className="flex items-center justify-center"
             style={{ marginTop: 48, gap: 16 }}
           >
-            <a
-              href="/ced666ad-0d94-4147-8f95-ea12eb1cad41"
+            <button
+              onClick={() => {
+                document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
+                showEmailForm();
+              }}
               className="btn"
               style={{
                 backgroundColor: "#000",
@@ -252,13 +260,14 @@ export function Landing() {
                 fontSize: 16,
                 lineHeight: "24px",
                 fontWeight: 500,
-                textDecoration: "none",
+                border: "none",
                 borderRadius: 0,
+                cursor: "pointer",
                 display: "inline-block",
               }}
             >
               Get started
-            </a>
+            </button>
             <a
               href="#how-it-works"
               className="btn btn-outline"
@@ -556,7 +565,7 @@ export function Landing() {
             padding: "0 32px",
             gap: 64,
           }}
-          className="flex items-center resp-stack resp-gap-md"
+          className="flex items-center resp-stack resp-gap-md resp-px"
         >
           {/* Divider */}
           <div
@@ -568,7 +577,7 @@ export function Landing() {
             }}
           />
           {/* Stat 1 */}
-          <div style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
+          <div className="resp-stat" style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
             <p
               className="font-alpina resp-stat-num"
               style={{ fontWeight: 500, fontSize: 60, lineHeight: "72px" }}
@@ -596,7 +605,7 @@ export function Landing() {
             }}
           />
           {/* Stat 2 */}
-          <div style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
+          <div className="resp-stat" style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
             <p
               className="font-alpina resp-stat-num"
               style={{ fontWeight: 500, fontSize: 60, lineHeight: "72px" }}
@@ -624,7 +633,7 @@ export function Landing() {
             }}
           />
           {/* Stat 3 */}
-          <div style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
+          <div className="resp-stat" style={{ flex: 1, padding: "0 32px", textAlign: "left" }}>
             <p
               className="font-alpina resp-stat-num"
               style={{ fontWeight: 500, fontSize: 60, lineHeight: "72px" }}
@@ -657,6 +666,7 @@ export function Landing() {
       {/* ==================== HOW IT WORKS ==================== */}
       <section
         id="how-it-works"
+        className="resp-px"
         style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}
       >
         <div className="flex items-center resp-stack resp-gap-md" style={{ gap: 64 }}>
@@ -694,7 +704,7 @@ export function Landing() {
             >
               How it works for your business
             </h2>
-            <div className="flex" style={{ marginTop: 60, gap: 36 }}>
+            <div className="flex resp-steps" style={{ marginTop: 60, gap: 36 }}>
               {/* Left sub-column: Numbered bullets */}
               <div
                 className="flex flex-col items-center"
@@ -779,6 +789,7 @@ export function Landing() {
               </div>
               {/* Right sub-column: Step content */}
               <div
+                className="resp-steps-text"
                 style={{
                   flex: 1,
                   display: "flex",
@@ -787,7 +798,7 @@ export function Landing() {
                 }}
               >
                 {/* Step 1 */}
-                <div style={{ paddingRight: 64 }}>
+                <div className="resp-step-pr" style={{ paddingRight: 64 }}>
                   <h3
                     style={{
                       fontSize: 24,
@@ -860,6 +871,7 @@ export function Landing() {
 
       {/* ==================== BOOKABLE BY AI ==================== */}
       <section
+        className="resp-px"
         style={{
           maxWidth: 1200,
           margin: "72px auto 0",
@@ -867,7 +879,7 @@ export function Landing() {
         }}
       >
         <div
-          className="resp-h-auto"
+          className="resp-h-auto-content"
           style={{ position: "relative", overflow: "hidden", height: 728 }}
         >
           {/* Background image */}
@@ -893,6 +905,7 @@ export function Landing() {
           />
           {/* Content */}
           <div
+            className="resp-px resp-bookable-content"
             style={{
               position: "relative",
               zIndex: 1,
@@ -928,7 +941,7 @@ export function Landing() {
               Your business, bookable by AI.
             </h2>
             {/* 3 text columns with dividers */}
-            <div className="flex" style={{ marginTop: 48, gap: 36 }}>
+            <div className="flex resp-stack" style={{ marginTop: 48, gap: 36 }}>
               {/* Column 1 */}
               <div style={{ flex: 1, textAlign: "center" }}>
                 <h3
@@ -954,6 +967,7 @@ export function Landing() {
               </div>
               {/* Divider */}
               <div
+                className="resp-hide"
                 style={{
                   width: 1,
                   background: "rgba(255,255,255,0.3)",
@@ -985,6 +999,7 @@ export function Landing() {
               </div>
               {/* Divider */}
               <div
+                className="resp-hide"
                 style={{
                   width: 1,
                   background: "rgba(255,255,255,0.3)",
@@ -1017,8 +1032,11 @@ export function Landing() {
             </div>
             {/* Button */}
             <div style={{ marginTop: 60 }}>
-              <a
-                href="/ced666ad-0d94-4147-8f95-ea12eb1cad41"
+              <button
+                onClick={() => {
+                  document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
+                  showEmailForm();
+                }}
                 className="btn btn-light"
                 style={{
                   background: "#fff7e8",
@@ -1027,13 +1045,14 @@ export function Landing() {
                   fontSize: 16,
                   lineHeight: "24px",
                   fontWeight: 500,
-                  textDecoration: "none",
+                  border: "none",
                   borderRadius: 0,
+                  cursor: "pointer",
                   display: "inline-block",
                 }}
               >
                 Get started
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -1041,6 +1060,7 @@ export function Landing() {
 
       {/* ==================== USE CASES ==================== */}
       <section
+        className="resp-px"
         style={{
           padding: "72px 0",
           maxWidth: 1200,
@@ -1097,7 +1117,7 @@ export function Landing() {
             <button
               key={tab.label}
               onClick={() => switchTab(i)}
-              className={`use-case-tab${i === activeTab ? " active" : ""}`}
+              className={`use-case-tab resp-tab-sm${i === activeTab ? " active" : ""}`}
               style={{
                 borderRadius: 99,
                 padding: "12px 20px",
@@ -1162,7 +1182,7 @@ export function Landing() {
             />
           </div>
           {/* Right: Content card */}
-          <div style={{ flex: 1, background: "#ede6d8", padding: 36 }}>
+          <div className="resp-center-block" style={{ flex: 1, background: "#ede6d8", padding: 36 }}>
             <h3
               className="uc-text-fade"
               style={{
@@ -1308,6 +1328,7 @@ export function Landing() {
 
       {/* ==================== PLATFORM ==================== */}
       <section
+        className="resp-px"
         style={{
           padding: "72px 0",
           maxWidth: 1200,
@@ -1693,7 +1714,7 @@ export function Landing() {
       <footer style={{ padding: "48px 0" }}>
         <div
           style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}
-          className="flex justify-between resp-footer-cols"
+          className="flex justify-between resp-footer-cols resp-px"
         >
           {/* Left side */}
           <div>
@@ -1707,7 +1728,7 @@ export function Landing() {
             </p>
           </div>
           {/* Right side */}
-          <div className="flex resp-stack" style={{ gap: 32 }}>
+          <div className="flex resp-footer-right" style={{ gap: 32 }}>
             {/* Legal */}
             <div className="resp-footer-col" style={{ width: 173 }}>
               <p
