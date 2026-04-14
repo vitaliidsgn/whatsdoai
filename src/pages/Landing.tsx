@@ -186,7 +186,6 @@ export function Landing() {
               className="resp-header-logo"
               style={{
                 width: "219.767px",
-                height: 21,
                 transform: "scaleX(-1)",
                 display: "block",
               }}

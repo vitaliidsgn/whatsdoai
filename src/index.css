@@ -67,7 +67,7 @@
   .resp-footer-col { width: auto !important; }
 
   /* Header logo */
-  .resp-header-logo { width: 150px !important; height: auto !important; }
+  .resp-header-logo { width: 170px !important; }
 
   /* Footer: Legal + Social side by side */
   .resp-footer-right { flex-direction: row !important; }
