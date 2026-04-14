@@ -1,6 +1,5 @@
 import { useState, useRef, useCallback, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { registerPartner } from "../api/client";
 import { CookieBanner } from "../components/CookieBanner";
 
 /* ------------------------------------------------------------------ */
@@ -93,8 +92,6 @@ export function Landing() {
 
   /* ---- Signup state ---- */
   const [showForm, setShowForm] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
   const emailRef = useRef<HTMLInputElement>(null);
 
   /* ---- Tab switch (mirrors vanilla JS switchTab) ---- */
@@ -152,21 +149,10 @@ export function Landing() {
     setTimeout(() => emailRef.current?.focus(), 0);
   };
 
-  const handleSignup = async (e: FormEvent) => {
+  const handleEmailSubmit = (e: FormEvent) => {
     e.preventDefault();
     const email = emailRef.current?.value ?? "";
-    setErrorMsg("");
-    setLoading(true);
-
-    try {
-      const data = await registerPartner(email);
-      navigate(`/${data.partner.id}`);
-    } catch (err: unknown) {
-      const msg =
-        err instanceof Error ? err.message : "Something went wrong.";
-      setErrorMsg(msg);
-      setLoading(false);
-    }
+    navigate(`/onboarding?email=${encodeURIComponent(email)}`);
   };
 
   /* ---- Render ---- */
@@ -192,10 +178,7 @@ export function Landing() {
             />
           </a>
           <button
-            onClick={() => {
-              document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
-              showEmailForm();
-            }}
+            onClick={() => navigate("/onboarding")}
             className="btn"
             style={{
               backgroundColor: "#000",
@@ -247,10 +230,7 @@ export function Landing() {
             style={{ marginTop: 48, gap: 16 }}
           >
             <button
-              onClick={() => {
-                document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
-                showEmailForm();
-              }}
+              onClick={() => navigate("/onboarding")}
               className="btn"
               style={{
                 backgroundColor: "#000",
@@ -1032,10 +1012,7 @@ export function Landing() {
             {/* Button */}
             <div style={{ marginTop: 60 }}>
               <button
-                onClick={() => {
-                  document.getElementById("signup")?.scrollIntoView({ behavior: "smooth" });
-                  showEmailForm();
-                }}
+                onClick={() => navigate("/onboarding")}
                 className="btn btn-light"
                 style={{
                   background: "#fff7e8",
@@ -1608,7 +1585,7 @@ export function Landing() {
             }}
           >
             {/* Button wrapper */}
-            {!showForm && !loading && (
+            {!showForm && (
               <div>
                 <button
                   className="btn btn-light"
@@ -1630,8 +1607,8 @@ export function Landing() {
             )}
 
             {/* Form */}
-            {showForm && !loading && (
-              <form onSubmit={handleSignup}>
+            {showForm && (
+              <form onSubmit={handleEmailSubmit}>
                 <div className="flex" style={{ gap: 8 }}>
                   <input
                     ref={emailRef}
@@ -1669,41 +1646,7 @@ export function Landing() {
                     Submit
                   </button>
                 </div>
-                {errorMsg && (
-                  <p
-                    style={{
-                      marginTop: 12,
-                      color: "#f87171",
-                      fontSize: 14,
-                    }}
-                  >
-                    {errorMsg}
-                  </p>
-                )}
               </form>
-            )}
-
-            {/* Loader */}
-            {loading && (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  padding: "8px 0",
-                }}
-              >
-                <span
-                  className="animate-spinner"
-                  style={{
-                    display: "inline-block",
-                    width: "1rem",
-                    height: "1rem",
-                    border: "2px solid rgba(255,247,232,0.3)",
-                    borderTopColor: "#fff7e8",
-                    borderRadius: "50%",
-                  }}
-                />
-              </div>
             )}
           </div>
         </div>
